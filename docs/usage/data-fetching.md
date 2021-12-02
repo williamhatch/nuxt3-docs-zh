@@ -109,7 +109,6 @@ const { data } = await useFetch('/api/count')
 ```js
 // /api/mountains/everest
 {
-  
   "title": "Mount Everest",
   "description": "Mount Everest is Earth's highest mountain above sea level, located in the Mahalangur Himal sub-range of the Himalayas. The China–Nepal border runs across its summit point",
   "height": "8,848 m",
@@ -120,9 +119,7 @@ const { data } = await useFetch('/api/count')
   "continent": "Asia",
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Everest_kalapatthar.jpg/600px-Everest_kalapatthar.jpg"
 }
-```
 
-```js
 // 组件中只使用到了title和description，useFetch使用option的pick参数来指定key
 <script setup>
 const { data: mountain } = await useFetch('/api/mountains/everest', { pick: ['title', 'description'] })

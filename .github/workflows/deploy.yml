@@ -27,7 +27,7 @@ jobs:
             ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
 
         - name: Build app
-          run: yarn generate
+          run: yarn docs:build
           env:
             ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
 
@@ -35,6 +35,6 @@ jobs:
           uses: peaceiris/actions-gh-pages@v3
           with:
            github_token: ${{ secrets.ACCESS_TOKEN }}
-           publish_dir: ./dist
+           publish_dir: ./docs/.vitepress/dist
           env:
            ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'

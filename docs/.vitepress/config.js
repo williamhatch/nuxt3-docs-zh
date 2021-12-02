@@ -1,7 +1,7 @@
 module.exports = {
   title: "Nuxt3中文文档",
   description: "由Nuxt3对赌学习群产出的中文文档",
-  base: "/",
+  base: "/nuxt3-docs-zh/",
   themeConfig: {
     sidebar: [
       {
@@ -26,6 +26,14 @@ module.exports = {
           { text: "plugins", link: "/directory-structure/plugins" },
           { text: "gitignore", link: "/directory-structure/gitignore" },
           { text: "tsconfig.json", link: "/directory-structure/tsconfig" },
+        ],
+      },
+      {
+        text: "部署",
+        link: "/deployment",
+        children: [
+          { text: "Azure", link: "/deployment/azure" },
+          { text: "PM2", link: "/deployment/pm2" }
         ],
       },
     ],
